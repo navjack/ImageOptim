@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -143,7 +143,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					5AB1154C1B52B1C800A3C73A = {
 						CreatedOnToolsVersion = 7.0;
@@ -151,11 +151,12 @@
 				};
 			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "jpegoptim" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* jpegoptim */;
 			projectDirPath = "";
@@ -213,6 +214,7 @@
 		1DEB928608733DD80010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = jpegoptim;
 				SKIP_INSTALL = YES;
 			};
@@ -221,6 +223,7 @@
 		1DEB928708733DD80010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = jpegoptim;
 				SKIP_INSTALL = YES;
 			};
@@ -230,6 +233,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A27BA32139B09080095FC2F /* debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_TESTABILITY = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -248,6 +252,7 @@
 					"$(SRCROOT)/../libjpeg/",
 					"$(SRCROOT)/../libjpeg/src/",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -256,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A27BA31139B09080095FC2F /* release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
 				"GCC_MODEL_TUNING[arch=x86_64]" = "-mtune=core2";
 				GCC_OBJC_CALL_CXX_CDTORS = NO;
@@ -276,6 +282,7 @@
 					"$(SRCROOT)/../libjpeg/",
 					"$(SRCROOT)/../libjpeg/src/",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 			};
 			name = Release;
 		};

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -139,7 +139,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					5AD202A81B52A5AB000D4FF2 = {
 						CreatedOnToolsVersion = 7.0;
@@ -152,14 +152,15 @@
 				};
 			};
 			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "gifsicle" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				Base,
+				fr,
+				en,
+				de,
+				ja,
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* gifsicle */;
 			projectDirPath = "";
@@ -204,6 +205,7 @@
 		1DEB928608733DD80010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_DYNAMIC_NO_PIC = NO;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = gifsicle;
@@ -213,6 +215,7 @@
 		1DEB928708733DD80010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = gifsicle;
 			};
@@ -222,6 +225,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A27B9D3139B07EA0095FC2F /* debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_TESTABILITY = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
 				GCC_THREADSAFE_STATICS = NO;
@@ -229,6 +233,7 @@
 					.,
 					gifsicle/include/,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SKIP_INSTALL = YES;
 			};
@@ -238,6 +243,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A27B9D0139B07DA0095FC2F /* release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
@@ -248,6 +254,7 @@
 					.,
 					gifsicle/include/,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

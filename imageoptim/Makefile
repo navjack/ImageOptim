@@ -9,7 +9,7 @@ $(SUBMODULES): ../.gitmodules
 	../scripts/fetch-submodule $(shell dirname $@) && touch $@
 
 pngout:
-	curl http://static.jonof.id.au/dl/kenutils/pngout-20150920-darwin.tar.gz | tar xz
+	curl http://static.jonof.id.au/dl/kenutils/pngout-20150920-darwin.tar.gz | tar -xf 
 	mv pngout-20150920-darwin/pngout pngout
 
 clean:
